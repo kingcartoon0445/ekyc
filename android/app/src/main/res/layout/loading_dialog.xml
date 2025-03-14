@@ -21,6 +21,6 @@
             android:layout_height="wrap_content"
             android:text="Đang xác thực CCCD..."
             android:textSize="16sp"
-            android:textColor="@color/appColor"
+            android:textColor="@color/black"
             android:paddingTop="10dp"/>
 </LinearLayout>
