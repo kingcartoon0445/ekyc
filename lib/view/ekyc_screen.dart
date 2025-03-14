@@ -24,7 +24,6 @@ class EkycScreen extends StatefulWidget {
 
 class _EkycScreenState extends State<EkycScreen> {
   bool isLoading = false;
-  String message = "";
   String dg15 = "";
   String cccd = "";
 
@@ -195,7 +194,6 @@ class _EkycScreenState extends State<EkycScreen> {
             const SizedBox(height: 16),
             if (isLoading) const CircularProgressIndicator(),
             const SizedBox(height: 16),
-            Text(message),
           ],
         ),
       ),
