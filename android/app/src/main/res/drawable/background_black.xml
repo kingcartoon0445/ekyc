@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base background color -->
+    <item
+        android:drawable="@drawable/background_gradient_dark">
+    </item>
+
+    <!-- Logo centered on the screen -->
+<!--    <item-->
+<!--        android:drawable="@drawable/ic_globedr_small"-->
+<!--        android:gravity="center"-->
+<!--        android:height="@dimen/_50sdp"-->
+<!--        android:width="@dimen/_50sdp"/>-->
+</layer-list>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="viewport_icon_height">36dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium_small">12dp</dimen>
+    <dimen name="margin_medium">22dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_default">14sp</dimen>
+
+    <dimen name="margin_none">0dp</dimen>
+    <dimen name="item_photo_width">112dp</dimen>
+    <dimen name="item_photo_height">112dp</dimen>
+
+    <dimen name="toggle_height">48dp</dimen>
+    <dimen name="toggle_padding">12dp</dimen>
+    <dimen name="tiny_margin">1dp</dimen>
+
+    <dimen name="input_label_padding_bottom">4dp</dimen>
+    <dimen name="input_label_vertical_spacing">8dp</dimen>
+    <dimen name="input_label_horizontal_spacing">4dp</dimen>
+
+    <item name="gutter_start_percent" format="float" type="dimen">0.05</item>
+    <item name="gutter_end_percent" format="float" type="dimen">0.95</item>
+    <item name="splash_item_spacing" format="float" type="dimen">0.01</item>
+    <item name="splash_text_button_spacing" format="float" type="dimen">0.025</item>
+    <item name="splash_item_image_height" format="float" type="dimen">0.30</item>
+</resources>

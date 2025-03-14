@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gutterStart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/gutter_start_percent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gutterEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/gutter_end_percent" />
+
+    <Space
+        android:id="@+id/top_space"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/intro_image_container"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHeight_percent="@dimen/splash_item_spacing"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/intro_image_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        app:layout_constraintHeight_percent="@dimen/splash_item_image_height"
+        app:layout_constraintBottom_toTopOf="@id/bottom_space"
+        app:layout_constraintEnd_toEndOf="@id/gutterEnd"
+        app:layout_constraintStart_toStartOf="@id/gutterStart"
+        app:layout_constraintTop_toBottomOf="@id/top_space">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/intro_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/img_splash_eid" />
+
+    </FrameLayout>
+
+    <Space
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/intro_title"
+        app:layout_constraintHeight_percent="@dimen/splash_item_spacing"
+        app:layout_constraintTop_toBottomOf="@id/intro_image_container" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/intro_title"
+        style="@style/Text.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/intro_description"
+        app:layout_constraintEnd_toEndOf="@id/gutterEnd"
+        app:layout_constraintStart_toStartOf="@id/gutterStart"
+        app:layout_constraintTop_toBottomOf="@id/bottom_space"
+        tools:text="Title"
+        android:textSize="@dimen/_17sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/intro_description"
+        style="@style/Text.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:justificationMode="inter_word"
+        android:textColor="@color/colorTextOnPrimary"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/floatingSection"
+        app:layout_constraintEnd_toEndOf="@id/gutterEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gutterStart"
+        app:layout_constraintTop_toBottomOf="@id/intro_title"
+        tools:text="@string/placeholder_description" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/floatingSection"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

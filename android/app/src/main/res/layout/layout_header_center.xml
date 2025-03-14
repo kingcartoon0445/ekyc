@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_96sdp"
+    android:background="@color/transparent"
+    android:id="@+id/cl_header_container">
+
+    <!-- Guidlines -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/header_gutter_start"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/header_gutter_end"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- Back Button -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_back"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/app_color_light_gray"
+        app:cardCornerRadius="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="@id/header_gutter_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Title Text View -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mcv_back"
+        app:layout_constraintEnd_toStartOf="@id/mcv_action"
+        tools:text="@string/placeholder_title" />
+
+    <!-- Action Button (Hidden default) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_action"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/app_color_light_gray"
+        app:cardCornerRadius="@dimen/_14sdp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/tv_title_header"
+        app:layout_constraintEnd_toStartOf="@id/header_gutter_end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_view_action"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

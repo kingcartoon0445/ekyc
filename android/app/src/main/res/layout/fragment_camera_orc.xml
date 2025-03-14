@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary">
+
+    <include
+        android:id="@+id/lheader"
+        layout="@layout/layout_header" />
+
+    <FrameLayout
+        android:id="@+id/frame_preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lheader"
+        app:layout_constraintDimensionRatio="W,54:85">
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:src="@drawable/ic_corner_lefttop"
+            android:layout_gravity="start|top"
+            app:tint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/ic_corner_righttop"
+            android:layout_gravity="end|top"
+            app:tint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/ic_corner_leftbottom"
+            android:layout_gravity="start|bottom"
+            app:tint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:src="@drawable/ic_corner_rightbottom"
+            android:layout_gravity="end|bottom"
+            app:tint="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/Text.Title"
+        android:id="@+id/tv_instruction_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:textAllCaps="true"
+        android:lines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="@string/instruction_front"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_preview" />
+
+    <com.google.android.material.button.MaterialButton
+        app:shapeAppearanceOverlay="@style/one_rounded"
+        android:textSize="@dimen/_12sdp"
+        android:layout_margin="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btn_capture"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/success"
+        android:textAllCaps="true"
+        android:fontFamily="@font/google_sans_medium"
+        android:textStyle="bold"
+        android:text="Chụp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_instruction_title"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:id="@+id/iv_capture"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

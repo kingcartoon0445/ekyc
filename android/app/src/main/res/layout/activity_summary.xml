@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/appColor"
+        android:id="@+id/ll_header"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="Xác thực Eid"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/svn_poppins_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/agreeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_header">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:background="@drawable/bg_radius"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivFrontEid"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginBottom="@dimen/_6sdp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBackEid"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                         />
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivSelfie"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_nikunj_face"
+                    android:scaleType="centerCrop"
+                    />
+            </LinearLayout>
+
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp"
+                >
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_number_eid_card"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_document_number"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:id="@+id/constraintFn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/fnTitle"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dob"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvDob"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/father_name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_father_name"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mother_name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_mother_name"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nationality"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvNationality"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_of_origin"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_place_of_origin"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_of_residence"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_place_of_residence"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_identification"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_personal_identification"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_of_issue"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_date_of_issue"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+            <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_out_line_light"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                app:corner_radius="@dimen/_10sdp">
+
+                <TextView
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_of_expiry"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_date_of_expiry"
+                    android:fontFamily="@font/svn_poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+        android:id="@+id/agreeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/shoot_gradient_bg"
+        android:paddingVertical="@dimen/_10sdp"
+        app:corner_radius="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:fontFamily="@font/svn_poppins_semibold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/verify_data"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

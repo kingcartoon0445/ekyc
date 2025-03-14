@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="corner_radius" format="dimension" />
+    <attr name="top_left_corner_radius" format="dimension" />
+    <attr name="top_right_corner_radius" format="dimension" />
+    <attr name="bottom_right_corner_radius" format="dimension" />
+    <attr name="bottom_left_corner_radius" format="dimension" />
+
+    <declare-styleable name="RoundCornerFrameLayout">
+        <attr name="corner_radius" />
+        <attr name="top_left_corner_radius" />
+        <attr name="top_right_corner_radius" />
+        <attr name="bottom_right_corner_radius" />
+        <attr name="bottom_left_corner_radius" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerLinearLayout">
+        <attr name="corner_radius" />
+        <attr name="top_left_corner_radius" />
+        <attr name="top_right_corner_radius" />
+        <attr name="bottom_right_corner_radius" />
+        <attr name="bottom_left_corner_radius" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerRelativeLayout">
+        <attr name="corner_radius" />
+        <attr name="top_left_corner_radius" />
+        <attr name="top_right_corner_radius" />
+        <attr name="bottom_right_corner_radius" />
+        <attr name="bottom_left_corner_radius" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerConstraintLayout">
+        <attr name="corner_radius" />
+        <attr name="top_left_corner_radius" />
+        <attr name="top_right_corner_radius" />
+        <attr name="bottom_right_corner_radius" />
+        <attr name="bottom_left_corner_radius" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="h,1:1">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_anim_scan_id"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_rawRes="@raw/nfc_animation"
+            app:lottie_loop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_60sdp"
+            app:layout_constraintDimensionRatio="h,1:1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/topContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/instruction"
+            android:fontFamily="@font/svn_poppins_medium"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/title_guide_nfc"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+            android:id="@+id/step1Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/lav_anim_scan_id"
+            app:corner_radius="@dimen/_10sdp"
+            android:background="@color/blue_light">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:text="@string/description_guide_nfc_step_1"/>
+
+        </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+
+        <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+            android:id="@+id/step2Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/step1Container"
+            app:corner_radius="@dimen/_10sdp"
+            android:background="@color/blue_light">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/svn_poppins_regular"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:text="@string/description_guide_nfc_step_2"/>
+
+        </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nfc_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/instruction_nfc"
+            android:textColor="@color/black"
+            android:fontFamily="@font/svn_poppins_regular"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/lav_anim_scan_id"
+            android:layout_marginHorizontal="@dimen/_20sdp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tv_nfc_instruction"
+            android:id="@+id/lav_animation_loading"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_60sdp"
+            app:lottie_rawRes="@raw/animation_loading"
+            android:scaleType="centerCrop"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:lottie_colorFilter="@color/appColor"
+            app:layout_constraintTop_toBottomOf="@id/tv_nfc_instruction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333545</color>
+    <color name="colorPrimaryDark">#20222E</color>
+    <color name="colorAccent">#19a9df</color>
+
+    <color name="appColor">#19a9df</color>
+
+    <color name="white">#ffffff</color>
+    <color name="background">#F8F8FF</color>
+    <color name="black">#D9000000</color>
+    <color name="grey_mid">#616365</color>
+    <color name="black_50">#80000000</color>
+
+    <color name="white_60">#99ffffff</color>
+
+    <color name="colorTextOnSecondary">#000000</color>
+    <color name="colorTextOnPrimary">#ffffff</color>
+    <color name="colorTextOnTertiary">#413392</color>
+    <color name="grey_2">#1f000000</color>
+    <color name="blue_light">#e6e8ee</color>
+    <color name="toogle_text_color">#2A3764</color>
+
+    <color name="success">#00A859</color>
+    <color name="failed">#B82B30</color>
+    <color name="warning">#D3B100</color>
+    <color name="unknown">#616365</color>
+    <color name="transparent">#00000000</color>
+    <color name="red_light">#FF8B83</color>
+
+    <color name="viewfinder_corners">#ffffffff</color> <!-- four corner elements for viewfinder -->
+    <color name="viewfinder_frame">#ffd6d6d6</color> <!-- viewfinder rectangle -->
+    <color name="viewfinder_mask">#60000000</color>  <!-- viewfinder exterior darkened area -->
+    <color name="status_text">#ffffffff</color> <!-- status_view_top/status_view_bottom text color -->
+
+    <color name="app_color_light_gray">#696773</color>
+    <color name="silver">#C1C1C1</color>
+</resources>

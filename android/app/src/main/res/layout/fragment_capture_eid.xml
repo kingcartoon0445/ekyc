@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_type_capture"
+            style="@style/Text.SemiBold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/label_front_id_card" />
+
+        <FrameLayout
+            android:id="@+id/frame_preview"
+            android:padding="@dimen/_1sdp"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_out_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/view_overlay"/>
+
+            <com.google.android.material.card.MaterialCardView
+                app:strokeColor="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="0dp">
+                <androidx.camera.view.PreviewView
+                    android:id="@+id/camera_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_preview"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Rounded"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+                <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:corner_radius="@dimen/_10sdp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@color/black_50">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/ic_status"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:src="@drawable/ic_checkmark"
+                            app:tint="@color/red_light" />
+                        <TextView
+                            android:id="@+id/txtInstruction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/label_guide_capture_id_card"
+                            style="@style/Text.Body"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_small"/>
+                    </LinearLayout>
+                </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </FrameLayout>
+
+        <com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout
+            android:id="@+id/autoShootContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@drawable/bg_out_line_light"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:corner_radius="@dimen/_10sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_camera"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:tint="@color/appColor" />
+
+            <TextView
+                style="@style/Text.SemiBold"
+                android:textColor="@color/grey_mid"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_auto_capture"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="center_vertical"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/autoShootToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:checked="false"
+                android:text=""/>
+
+        </com.gtel.ekyc.roundcornerlayout.RoundCornerLinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_capture"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_capture_round"
+        android:layout_marginBottom="@dimen/_17sdp"
+        app:tint="@color/appColor" />
+
+    <LinearLayout
+        android:id="@+id/optionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:visibility="gone">
+
+        <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+            android:id="@+id/takePictureAgain"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_out_line_light"
+            android:paddingVertical="@dimen/_10sdp"
+            app:corner_radius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/label_re_take_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+
+        <com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout
+            android:id="@+id/btnConfirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shoot_gradient_bg"
+            android:paddingVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:corner_radius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tvButtonConfirm"
+                android:fontFamily="@font/svn_poppins_semibold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/label_confirm"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </com.gtel.ekyc.roundcornerlayout.RoundCornerConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

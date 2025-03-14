@@ -1,0 +1,277 @@
+<resources>
+    <string name="app_name">Echeck</string>
+    <string name="app_name_version">Echeck - 1.0.0</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="delete_csca">Delete CSCA Master List</string>
+    <string name="doc_dob">Ngày sinh: %1s</string>
+    <string name="doc_expiry">Hết hạn: %1s</string>
+    <string name="doc_number">Số CCCD: %1s</string>
+    <string name="document_chip_content_success">The EID chip and content are valid</string>
+    <string name="document_chip_failure">The EID chip is invalid</string>
+    <string name="document_content_success">The EID content is valid</string>
+    <string name="document_csca_failure">The CSCA information is invalid</string>
+    <string name="document_document_failure">The EID chip information is invalid.</string>
+    <string name="document_genuinity_failure">The EID is not genuinity.</string>
+    <string name="document_cert_failure">The EID certificate is invalid or not in correct format.</string>
+    <string name="document_signature_failure">The RAR response is invalid.</string>
+    <string name="document_invalid_eid">Invalid eID</string>
+    <string name="document_unknown_eid_message">Unable to authenticate the EID</string>
+    <string name="document_unknown_eid_title">Unknown EID</string>
+    <string name="document_valid_eid">Valid EID</string>
+    <string name="download_csca">Tải CSCA Master List</string>
+    <string name="error_validation_date">Date format is not valid</string>
+    <string name="error_validation_document_number">Document number is not valid</string>
+    <string name="keystore_not_empty_message">Do you want to replace the current keystore?</string>
+    <string name="keystore_not_empty_title">Keystore</string>
+    <string name="label_additional_document_information">Thông tin cá nhân khác</string>
+    <string name="label_additional_document_information_date_and_time_of_personalization">Date personalization</string>
+    <string name="label_additional_document_information_date_of_issue">Date issue</string>
+    <string name="label_additional_document_information_endorsements_and_observations">Observations</string>
+    <string name="label_additional_document_information_image_front">Image front</string>
+    <string name="label_additional_document_information_image_rear">Image rear</string>
+    <string name="label_additional_document_information_issuing_authority">Issuing authority</string>
+    <string name="label_additional_document_information_names_of_other_persons">Names of other persons</string>
+    <string name="label_additional_document_information_personalization_system_serial_number">System serial number</string>
+    <string name="label_additional_document_information_tax_or_exit_requirements">Tax or exit requirements</string>
+    <string name="label_additional_information">Thông tin thêm</string>
+    <string name="label_additional_information_custody">Giám hộ</string>
+    <string name="label_additional_information_dob">Ngày sinh</string>
+    <string name="label_additional_information_other_names">Tên khác</string>
+    <string name="label_additional_information_other_valid_td_numbers">Other Td numbers</string>
+    <string name="label_additional_information_permanent_address">Địa chỉ thường trú</string>
+    <string name="label_additional_information_personal_number">Số CCCD</string>
+    <string name="label_additional_information_personal_summary">Bản thân</string>
+    <string name="label_additional_information_place_of_birth">Quê quán</string>
+    <string name="label_additional_information_profession">Nghề nghiệp</string>
+    <string name="label_additional_information_telephone">Số điện thoại</string>
+    <string name="label_additional_information_title">Danh xưng</string>
+    <string name="label_genuinity">Toàn vẹn dữ liệu (A-System Requirements)</string>
+    <string name="label_verification">Xác thực</string>
+    <string name="label_facematch">Xác thực khuôn mặt</string>
+    <string name="label_authentication_document_signed">Document Signed</string>
+    <string name="label_authentication_passive">Passive Authentication</string>
+    <string name="label_authentication_active">Active Authentication</string>
+    <string name="label_authentication_bac">BAC</string>
+    <string name="label_authentication_chip">Chip Authentication</string>
+    <string name="label_authentication_country_signing">CSCA</string>
+    <string name="label_authentication_cert_verification">EID Certifiate Verification</string>
+    <string name="label_authentication_kyc">KYC</string>
+    <string name="label_authentication_eac">EAC</string>
+    <string name="label_authentication_xverify">XVERIFY</string>
+    <string name="label_authentication_pace">PACE</string>
+    <string name="label_certificate_issuer">Issuer</string>
+    <string name="label_certificate_public_key_algorithm">Public key algorithm</string>
+    <string name="label_certificate_serial_number">Serial number</string>
+    <string name="label_certificate_signature_algorithm">Signature algorithm</string>
+    <string name="label_certificate_subject">Subject</string>
+    <string name="label_certificate_thumbprint">Certificate thumbprint</string>
+    <string name="label_certificate_valid_from">Có hạn từ</string>
+    <string name="label_certificate_valid_to">Có hạn tới</string>
+    <string name="label_country_signing_certificate">Country Signing Certificate</string>
+    <string name="label_document_expiry">Hết hạn</string>
+    <string name="label_document_issued">Issuing Date</string>
+    <string name="label_document_issuing_state">Nơi cung cấp</string>
+    <string name="label_document_nationality">Quốc tịch</string>
+    <string name="label_document_number">Số CCCD</string>
+    <string name="label_document_signing_certificate">Document Signing Certificate</string>
+    <string name="label_not_available">NA</string>
+    <string name="label_eid">Thông tin căn cước</string>
+    <string name="name">%1s %2s</string>
+    <string name="nfc_title">Đặt thiết bị lên thẻ CCCD và không di chuyển</string>
+    <string name="nfc_verify">Đang xác thực, vui lòng chờ...</string>
+    <string name="please_wait_verifying">Đang xác thực, vui lòng chờ.</string>
+    <string name="verify_success">Xác thực thành công</string>
+    <string name="verify_failed">Xác thực không thành công</string>
+    <string name="eid_invalid">Thẻ CCCD Không hợp lệ</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="prompt_document_date_of_birth">Ngày sinh (yymmdd)</string>
+    <string name="prompt_document_expiration">Hết hạn (yymmdd)</string>
+    <string name="prompt_document_number">9 số cuối CCCD</string>
+    <string name="read_nfc">ĐỌC NFC</string>
+    <string name="selection_automatic">Tự động (SCAN MRZ)</string>
+    <string name="selection_manual">Thủ công</string>
+    <string name="selection_title">Nhập số liệu</string>
+    <string name="status_bar_failure">OCR Read failure - Time required: %1d ms</string>
+    <string name="status_bar_ocr">Số CCCCD: %1s Ngày sinh: %2s Hết hạn: %3s</string>
+    <string name="status_bar_success">OCR Detected - Time required: %2dms</string>
+    <string name="warning_authentication_failed">Authentication has failed! Please try to scan the document again or introduce the data manually.</string>
+    <string name="warning_cla_not_supported">Impossible to read the document. EID doesn\'t support CLA .</string>
+    <string name="warning_enable_nfc">Cần kích hoạt NFC</string>
+    <string name="warning_error_ocr_install">Error Installing &amp; Starting OCR</string>
+    <string name="warning_no_nfc">Không có NFC trên thiết bị này</string>
+    <string name="warning_ocr_install">Installing &amp; Starting OCR</string>
+    <string name="warning_ocr_install_progress">Installation OCR: %1d%%</string>
+    <string name="national_person_information">Thông tin thêm</string>
+    <string name="citizen_id">Số CCCD</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="dob">Ngày sinh</string>
+    <string name="gender">Giới tính</string>
+    <string name="nationality">Quốc tịch</string>
+    <string name="ethnicity">Dân tộc</string>
+    <string name="religion">Tôn giáo</string>
+    <string name="place_of_origin">Quê quán</string>
+    <string name="place_of_residence">Thường trú</string>
+    <string name="age">Tuổi</string>
+    <string name="date_of_issue">Ngày cấp</string>
+    <string name="date_of_expiry">Có giá trị đến</string>
+    <string name="personal_identification">Đặc điểm nhận dạng</string>
+    <string name="issue_date">Ngày cấp</string>
+    <string name="expiry_date">Có giá trị đến</string>
+    <string name="father_name">Tên bố</string>
+    <string name="mother_name">Tên mẹ</string>
+    <string name="spouse_name">Tên vợ/chồng</string>
+    <string name="old_id_card">Số CMND</string>
+    <string name="unk_id_number">UNK ID Number</string>
+    <string name="unk_info">UNK Info</string>
+    <string name="personal_info">Thông tin cá nhân</string>
+    <string name="put_your_face_in_the_frame">Giữ điện thoại cố định, đặt khuôn mặt của bạn vào khung hình và nhìn thẳng về phía trước.</string>
+    <string name="please_look_straight">Vui lòng nhìn thẳng</string>
+    <string name="please_tilt_your_face_to_the_left">Vui lòng nhìn sang trái</string>
+    <string name="please_tilt_your_face_to_the_right">Vui lòng nhìn sang phải</string>
+    <string name="please_open_your_mouth">Vui lòng mở miệng</string>
+    <string name="please_smile">Vui lòng cườii</string>
+    <string name="please_sadness">Please have a sad expression</string>
+    <string name="please_surprised">Please show a surprised expression</string>
+    <string name="multi_face">Có nhiều khuôn mặt trong khung hình</string>
+    <string name="completed">Hoàn Thành</string>
+
+    <string name="eid_face">Khuôn mặt</string>
+    <string name="service_message_code_failed">\"Request failed with code \"</string>
+    <string name="service_message_no_data_available">No data available.</string>
+    <string name="service_message_please_wait">Please wait…</string>
+    <string name="service_message_connection_error">Please check internet connection</string>
+    <string name="service_message_success">Success</string>
+    <string name="service_message_error">Error</string>
+    <string name="service_message_something_wrong">Something went wrong!</string>
+    <string name="service_message_unauthorized">Unauthorized, Token session is invalid</string>
+    <string name="service_message_body_empty">Content is empty</string>
+    <string name="service_message_invalid_object">Object is invalid</string>
+    <string name="error_object_invalid">Object is invalid.</string>
+    <string name="verify_failed_description_face">Xác thực không thành công! Vui lòng xác nhận lại. Đặt khuôn mặt của bạn vào khung hình và làm theo hướng dẫn xác minh.</string>
+
+    <string name="step_1_scan_mrz">Bước 1: Quét mã MRZ</string>
+    <string name="step_2_scan_nfc">Bước 2: Đọc NFC</string>
+    <string name="step_3_scan_nfc">Bước 3: Phát hiện người thật</string>
+    <string name="step_3_verify_face" translatable="false">Bước 3: Xác Thực Khuôn Mặt</string>
+    <string name="please_go_to_setting_and_allow_permission">Vui lòng vào Cài đặt và cấp quyền cho ứng dụng</string>
+
+    <string name="loading_data">Tải dữ liệu…</string>
+    <string name="placeholder_title" translatable="false">Lorem ipsum title</string>
+
+    <string name="placeholder_description" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+
+    <string name="title_verify_suite">Dịch Vụ Xác Thực</string>xavs
+    <string name="title_verify_eid">CCCD</string>xavs
+    <string name="title_verify_eid_ekyc">eKYC</string>
+    <string name="title_verify_eid_ceca">Hợp Đồng</string>
+    <string name="title_verify_eid_image">Hình ảnh</string>
+    <string name="title_success_verification">Xác Thực Thành Công</string>
+    <string name="title_not_success_verification">Xác Thực Không Thành Công</string>
+
+    <!-- New -->
+    <string name="intro_title_eid">Xác thực CCCD gắn chip</string>
+    <string name="intro_description_eid">Xác minh thông tin thật giả của CCCD gắn chip và tích hợp với dịch vụ xác thực của C06.\n\n
+        Bước 1: Xác minh toàn vẹn dữ liệu CA/PA/AA.\n Bước 2: Xác thực với C06. \n Bước 3: Hiển thị thông tin chủ thẻ.</string>
+
+    <string name="intro_title_ekyc">Xác thực eKYC</string>
+    <string name="intro_description_ekyc">Xác minh thông tin thật giả của CCCD gắn chip, eKYC và tích hợp với dịch vụ xác thực của C06.\n\n
+        Bước 1: Xác minh toàn vẹn dữ liệu CA/PA/AA.\n Bước 2: Xác định thực thể sống.\n Bước 3: Xác thực với C06. \n Bước 4: Hiển thị thông tin chủ thẻ và khuôn mặt.</string>
+
+    <string name="intro_title_contract">Xác thực hợp đồng</string>
+    <string name="intro_description_contract">Xác minh thông tin thật giả của CCCD gắn chip, eKYC và tích hợp với dịch vụ xác thực của C06.\n\n
+        Bước 1: Đọc hợp đồng.\n Bước 2: Xác minh toàn vẹn dữ liệu CA/PA/AA.\n Bước 3: Xác định thực thể sống.\n Bước 4: Xác thực với C06. \n Bước 5: Hiển thị thông tin chủ thẻ và khuôn mặt.\n Bước 6: Hoàn tất ký kết hợp đồng</string>
+
+    <string name="permission_please_go_to_setting_and_allow">Vui lòng vào Cài đặt và cấp quyền cho ứng dụng</string>
+    <string name="permission_no_camera">Ứng dụng này không thể chạy vì nó không có quyền truy cập vào camera. Ứng dụng bây giờ sẽ thoát.</string>
+    <string name="permission_camera_rationale">Cần truy cập vào camera để thực hiện tác vụ</string>
+    <string name="instruction_mrz_code">Vui lòng đặt mặt sau thẻ CCCD vào khung hình</string>
+    <string name="instruction_nfc">Đặt mặt sau của điện thoại áp sát vào giấy tờ tùy thân.\nKhông di chuyển điện thoại hoặc giấy tờ tùy thân cho đến khi quá trình quét hoàn tất.</string>
+    <string name="nfc_read">Thẻ CCCD đã đọc hoàn tất</string>
+    <string name="contract_eid_verified">Chúc mừng bạn đã hoàn tất xác thực.\nBấm nút TIẾP TỤC để ký số</string>
+    <string name="instruction_front">Chụp ảnh mặt trước CCCD</string>
+    <string name="instruction_back">Chụp ảnh mặt sau CCCD</string>
+
+    <string name="button_title_begin">Bắt Đầu</string>
+    <string name="button_title_completed">Xong</string>
+    <string name="button_title_continue">Tiếp tục</string>
+    <string name="button_title_try_again">Thử Lại</string>
+
+    <string name="empty_na">Không có dữ liệu</string>
+    <string name="loading_verify">Đang xác thực dữ liệu</string>
+    <string name="error_read_mrz_not_success">Đọc mã không thành công</string>
+    <string name="error_read_mrz_not_image">Không tìm thấy hình ảnh</string>
+    <string name="error_read_card">Xảy ra lỗi khi đọc thẻ. Xin vui lòng thử lại.</string>
+    <string name="error_not_success">Không thành công.</string>
+    <string name="error">Xảy ra lỗi. Xin vui lòng thử lại.</string>
+    <string name="error_system">Lỗi hệ thống. Xin vui lòng thử lại.</string>
+    <string name="error_verification">Xác thực không thành công. Xin vui lòng thử lại.</string>
+    <string name="cancel">Hủy</string>
+    <string name="image_original">Ảnh gốc</string>
+    <string name="image_face_live">Hiện tại</string>
+    <string name="eid_asystems_requirements">Toàn vẹn</string>
+    <string name="eid_verification">Xác thực CCCD</string>
+    <string name="face_matching">Face Matching</string>
+    <string name="error_take_picture">Lỗi chụp ảnh</string>
+
+    <string name="verify_face_transfer" translatable="false">Xác Thực Khuôn Mặt Giao Dịch</string>
+
+    <string name="intro_title_bio2345">Xác thực Bio-2345</string>
+    <string name="intro_description_bio2345">Xác minh thông tin thật giả của CCCD gắn chip và dịch vụ xác thực của C06.
+        \n\nBước 1: Xác thực thẻ gắn chip với Bộ Công An.\nBước 2: Xác thực sinh trắc Face Match 1:1 với thẻ Chip.\nBước 3: Xác thực OTP trên thiết bị.\nBước 4: Ghi nhận OTP thành công thì có thể bắt đầu giao dịch loại C&amp;D trên thiết bị.</string>
+    <string name="title_verify_bio2345">Bio-2345</string>
+    <string name="image_chip">Hình chip</string>
+    <string name="image_selfie">Hình onboard</string>
+    <string name="please_nod_up">Please face up.</string>
+    <string name="please_nod_down">Please look down.</string>
+    <string name="enter_otp">Nhập mã OTP:</string>
+    <string name="transaction_type_c">Giao dịch loại C</string>
+    <string name="transaction_type_d">Giao dịch loại D</string>
+    <string name="onboard_success">Onboard Thành công</string>
+    <string name="chip_image">Hình chip</string>
+    <string name="verify_transaction_otp">Xác thực OTP giao dịch</string>
+    <string name="verify_onboard_otp">Xác thực OTP onboard</string>
+    <string name="home_page">Trang chủ</string>
+    <string name="transaction_success">Giao dịch thành công</string>
+    <string name="transaction_failed">Giao dịch thất bại</string>
+    <string name="read_mrz_code">Đọc mã MRZ</string>
+    <string name="connect_to_nfc_code">Đọc NFC</string>
+    <string name="enter_manually">Enter Manually</string>
+
+    <string name="capture_front">Mặt trước</string>
+    <string name="capture_back">Mặt sau</string>
+
+    <string name="label_scan_qrcode">Quét mã QR</string>
+    <string name="title_header_capture_id_card">Take photo of CCCD with chip</string>
+    <string name="title_header_update_info_biometric">Update biometric information</string>
+    <string name="label_front_id_card">Mặt trước thẻ CCCD</string>
+    <string name="label_back_id_card">Mặt sau thẻ CCCD</string>
+    <string name="label_guide_please_put_in_eid_in_frame">Đặt mặt trước của thẻ CCCD gắn chip vào khung hình</string>
+    <string name="label_guide_capture_id_card">Đặt mặt trước của thẻ CCCD gắn chip vào khung hình. Hệ thống sẽ tự động chụp ảnh.</string>
+    <string name="label_auto_capture">Tự động chụp thẻ</string>
+    <string name="select_type_card_title_top">To update your personal information or verify your registered service profile online , please select the method you would like to use.</string>
+    <string name="label_popup_guide_capture_eid">Please provide the image information of the CCCD with chip to use for authentication through the VNeID Electronic Identification and Authentication account. Please select the correct type of document and follow the instructions in the next step.</string>
+    <string name="label_re_take_photo">Chụp lại ảnh</string>
+    <string name="label_continue">Tiếp tục</string>
+    <string name="label_confirm">Xác nhận</string>
+    <string name="label_guide_please_put_in_back_eid_in_frame">Đặt mặt sau của thẻ CCCD gắn chip vào khung hình</string>
+    <string name="label_guide_capture_back_id_card">Đặt mặt sau của thẻ CCCD gắn chip vào khung hình. Hệ thống sẽ tự động chụp ảnh.</string>
+    <string name="not_detect_card">Di chuyển camera ra xa rồi đưa về vị trí ban đầu.</string>
+    <string name="label_take_photo_success">Chụp ảnh thành công.</string>
+    <string name="label_take_photo_fail">Chụp ảnh thất bại.</string>
+
+    <string name="title_header_summary">Summary</string>
+    <string name="verify_data">Xác thực</string>
+    <string name="label_number_eid_card">Mã CCCD</string>
+
+    <string name="title_guide_nfc">Hướng dẫn đọc thẻ Căn cước Công dân bằng NFC.</string>
+    <string name="description_guide_nfc_step_1"><b><u>Bước 1:</u></b> Vui lòng đặt mặt sau của điện thoại gần mặt sau của thẻ chip (vị trí đọc tương ứng với vùng màu đỏ trong hình minh họa).</string>
+    <string name="description_guide_nfc_step_2"><b><u>Bước 2:</u></b> Giữ thẻ ID và điện thoại cố định trong khi thiết bị đang đọc thông tin thẻ.</string>
+
+    <string name="title_header_face_auth">Xác thực khuôn mặt</string>
+    <string name="label_environment_light">Môi trường đủ sáng</string>
+    <string name="no_glasses">Không kính</string>
+    <string name="no_mask">Không khẩu trang</string>
+    <string name="popup_guide_face_auth">Vui lòng thực hiện các thao tác xác thực khuôn mặt theo hướng dẫn và giữ điện thoại ở ngang tầm mắt, cách mặt từ 30-40cm...</string>
+    <string name="start_take_photo">Bắt đầu xác thực</string>
+
+</resources>

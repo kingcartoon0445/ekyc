@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btnRun"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="READ"/>
+
+    <Button
+        android:id="@+id/btnNFC"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="NFC"/>
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="CALL"/>
+
+    <ImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+</LinearLayout>

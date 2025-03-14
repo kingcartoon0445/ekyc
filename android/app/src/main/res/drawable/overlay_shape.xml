@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Full-screen semi-transparent background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#88000000" />
+        </shape>
+    </item>
+
+    <!-- Cut-out shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+
+            <!-- Define the cut-out area using padding and radius -->
+            <size
+                android:width="300dp"
+                android:height="300dp" />
+
+            <corners android:radius="150dp" />
+        </shape>
+    </item>
+</layer-list>
